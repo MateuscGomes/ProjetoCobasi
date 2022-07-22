@@ -14,6 +14,6 @@ Chrome: https://www.google.com/intl/pt-BR/chrome/
 
 3- Utilize a IDE de sua preferência, cole o repositório e  (Ex: Eclipse, IntelliJ.)
 
-4- O aplicativo irá demonstrar a compra de um produto mas cancelar no momento final e retornar a pagina home.
+4- O aplicativo irá demonstrar a compra de um produto, mas cancelar no momento final e retornar a página home.
 
 
