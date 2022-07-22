@@ -12,7 +12,7 @@ Foi criado para testar a página https:cobasi.com.br com intuito de aprimorar mi
 Driver da Web do Chrome: https://chromedriver.chromium.org/getting-started
 Chrome: https://www.google.com/intl/pt-BR/chrome/
 
-3- Utilize a IDE de sua preferência, cole o repositório  (Ex: IntelliJ, Eclipse).
+3- Utilize a IDE de sua preferência, cole o repositório  (Ex: Eclipse, IntelliJ).
 
 4- O aplicativo irá demonstrar a compra de um produto, mas cancelar no momento final e retornar a página home.
 
