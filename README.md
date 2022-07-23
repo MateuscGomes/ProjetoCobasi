@@ -4,7 +4,10 @@
 ## Sobre o Projeto:
 Criado para testar a página https://cobasi.com.br com intuito de aprimorar minhas habilidades de testes automatizados, testes de regressão e testes unitários com foco em manunteção e controle.
 
-### Iniciando:
+### Ferramentas:
+Selenium e JUnit.
+
+#### Iniciando:
 1- Clone o repositório.
 
 2- Você deve utilizar um navegador e seu driver respectivo. ( Ex: Chrome, use o driverChrome.)
