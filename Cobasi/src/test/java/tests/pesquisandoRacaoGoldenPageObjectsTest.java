@@ -30,6 +30,7 @@ public class pesquisandoRacaoGoldenPageObjectsTest {
 
     @After
     public void tearDown(){
+
         navegador.quit();
     }
 }

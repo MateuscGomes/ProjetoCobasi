@@ -2,6 +2,7 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -21,15 +22,17 @@ public class referenciaDoProduto extends BasePage {
     }
 
     public referenciaDoProduto clicarComprar(){
-        navegador.findElement(By.xpath("//button[text()='Comprar']")).click();
+        navegador.findElement(By.xpath("//button[text()='Adicionar ao carrinho']"));
+        WebElement botaoComprar = navegador.findElement(By.xpath("//button[text()='Adicionar ao carrinho']"));
+        botaoComprar.click();
 
         return this;
     }
 
     public carrinhoDeCompra confirmarCompra(){
-        WebDriverWait caixaComprar = new WebDriverWait(navegador, Duration.ofSeconds(10));
-        caixaComprar.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[text()='Produto adicionado ao Carrinho']")));
-        navegador.findElement(By.linkText("Finalizar Compra")).click();
+        WebDriverWait caixaComprar = new WebDriverWait(navegador, Duration.ofSeconds(30));
+        caixaComprar.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='styles__wrap-sc-yb2pa1-6 hgcfNY']")));
+        navegador.findElement(By.linkText("Ir para o carrinho")).click();
 
         return new carrinhoDeCompra(navegador);
     }

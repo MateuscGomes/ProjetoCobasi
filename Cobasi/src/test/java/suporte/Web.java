@@ -11,7 +11,7 @@ public class Web {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\mateu\\drivers\\102\\chromedriver.exe");
         WebDriver navegador = new ChromeDriver();
         navegador.manage().window().maximize();
-        navegador.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        navegador.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 
         // Logar na pagina inicial da Cobasi
         navegador.get("https://cobasi.com.br");

@@ -25,7 +25,7 @@ public class pesquisandoRacaoGoldenTest {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\mateu\\drivers\\102\\chromedriver.exe");
         navegador = new ChromeDriver();
         navegador.manage().window().maximize();
-        navegador.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        navegador.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         // Logar na pagina inicial da Cobasi
         navegador.get("https://cobasi.com.br");
@@ -45,15 +45,17 @@ public class pesquisandoRacaoGoldenTest {
         // Selecionar ração de 20Kg com XPATH "//span[text()='20 kg']"
         navegador.findElement(By.xpath("//span[text()='20 kg']")).click();
 
-        // Clicar no campo comprar com XPATH "//button[text()='Comprar']"
-        navegador.findElement(By.xpath("//button[text()='Comprar']")).click();
+        // Clicar no campo comprar com XPATH "//button[text()='Adicionar ao carrinho']"
+        navegador.findElement(By.xpath("//button[text()='Adicionar ao carrinho']"));
+        WebElement botaoComprar = navegador.findElement(By.xpath("//button[text()='Adicionar ao carrinho']"));
+        botaoComprar.click();
 
         // Reconhecer Box-modal
-        WebDriverWait caixaComprar = new WebDriverWait(navegador, Duration.ofSeconds(10));
-        caixaComprar.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[text()='Produto adicionado ao Carrinho']")));
+        WebDriverWait caixaComprar = new WebDriverWait(navegador, Duration.ofSeconds(20));
+        caixaComprar.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='styles__wrap-sc-yb2pa1-6 hgcfNY']")));
 
         // Clicar no link com o campo "Finalizar Compra"
-        navegador.findElement(By.linkText("Finalizar Compra")).click();
+        navegador.findElement(By.linkText("Ir para o carrinho")).click();
 
         // Clicar no link com o campo "Limpar Carrinho"
         navegador.findElement(By.linkText("Limpar Carrinho")).click();
