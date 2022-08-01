@@ -28,7 +28,7 @@ public class pesquisandoRacaoGoldenTest {
         navegador.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         // Logar na pagina inicial da Cobasi
-        navegador.get("https://cobasi.com.br");
+        navegador.get("https://www.cobasi.com.br");
 
     }
     @Test
