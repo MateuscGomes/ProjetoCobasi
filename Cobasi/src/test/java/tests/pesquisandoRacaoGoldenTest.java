@@ -45,10 +45,10 @@ public class pesquisandoRacaoGoldenTest {
         // Selecionar ração de 20Kg com XPATH "//span[text()='20 kg']"
         navegador.findElement(By.xpath("//span[text()='20 kg']")).click();
 
-        // Clicar no campo comprar com XPATH "//button[text()='Adicionar ao carrinho']"
-        navegador.findElement(By.xpath("//button[text()='Adicionar ao carrinho']"));
-        WebElement botaoComprar = navegador.findElement(By.xpath("//button[text()='Adicionar ao carrinho']"));
-        botaoComprar.click();
+        // Primeiro reconhecer elemento que saiu do DOM, clicar no campo comprar com XPATH "//button[text()='Adicionar ao carrinho']"
+        WebDriverWait botao2 = new WebDriverWait(navegador, Duration.ofSeconds(10));
+        botao2.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Adicionar ao carrinho']")));
+        navegador.findElement(By.xpath("//button[text()='Adicionar ao carrinho']")).click();
 
         // Reconhecer Box-modal
         WebDriverWait caixaComprar = new WebDriverWait(navegador, Duration.ofSeconds(20));

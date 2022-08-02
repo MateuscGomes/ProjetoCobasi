@@ -22,9 +22,9 @@ public class referenciaDoProduto extends BasePage {
     }
 
     public referenciaDoProduto clicarComprar(){
-        navegador.findElement(By.xpath("//button[text()='Adicionar ao carrinho']"));
-        WebElement botaoComprar = navegador.findElement(By.xpath("//button[text()='Adicionar ao carrinho']"));
-        botaoComprar.click();
+        WebDriverWait botao2 = new WebDriverWait(navegador, Duration.ofSeconds(10));
+        botao2.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Adicionar ao carrinho']")));
+        navegador.findElement(By.xpath("//button[text()='Adicionar ao carrinho']")).click();
 
         return this;
     }
