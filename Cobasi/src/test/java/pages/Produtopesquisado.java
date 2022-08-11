@@ -11,7 +11,7 @@ public class Produtopesquisado extends BasePage{
     }
 
     public referenciaDoProduto confirmarProduto(){
-        navegador.findElement(By.xpath("//div[@data-testid='product-item']")).click();
+        navegador.findElement(By.xpath("//div[@class='MuiGrid-root ProductListItem MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4']")).click();
 
         return new referenciaDoProduto(navegador);
     }

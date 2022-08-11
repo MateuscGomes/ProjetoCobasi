@@ -40,7 +40,7 @@ public class pesquisandoRacaoGoldenTest {
         navegador.findElement(By.className("btn-buscar")).click();
 
         // Selecionar a ração "Ração Golden Special para Cães Adultos Frango e Carne 15 kg" com a XPATH "//div[@class='styles__ProductItem-sc-1ac06td-1 iVQkzc']"
-        navegador.findElement(By.xpath("//div[@class='styles__ProductItem-sc-1ac06td-1 iVQkzc']")).click();
+        navegador.findElement(By.xpath("//div[@class='MuiGrid-root ProductListItem MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4']")).click();
 
         // Selecionar ração de 20Kg com XPATH "//span[text()='20 kg']"
         navegador.findElement(By.xpath("//span[text()='20 kg']")).click();
@@ -52,7 +52,7 @@ public class pesquisandoRacaoGoldenTest {
 
         // Reconhecer Box-modal
         WebDriverWait caixaComprar = new WebDriverWait(navegador, Duration.ofSeconds(20));
-        caixaComprar.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='styles__wrap-sc-yb2pa1-6 hgcfNY']")));
+        caixaComprar.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='styles__CardTitle-sc-fbi3ap-2 lhvaqQ']")));
 
         // Clicar no link com o campo "Finalizar Compra"
         navegador.findElement(By.linkText("Ir para o carrinho")).click();

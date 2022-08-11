@@ -17,7 +17,7 @@ public class pesquisandoRacaoGoldenPageObjectsTest {
     @Test
     public void pesquisarRacao(){
      new PesquisarProduto(navegador)
-             .pesquisarProduto()
+             .pesquisarProduto("Ração Golden Special para Cães Adultos Frango e Carne 15 kg")
              .confirmarProduto()
              .Selecionar20KG()
              .comprarEConfirmarProduto()

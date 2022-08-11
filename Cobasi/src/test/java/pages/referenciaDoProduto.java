@@ -31,7 +31,7 @@ public class referenciaDoProduto extends BasePage {
 
     public carrinhoDeCompra confirmarCompra(){
         WebDriverWait caixaComprar = new WebDriverWait(navegador, Duration.ofSeconds(30));
-        caixaComprar.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='styles__wrap-sc-yb2pa1-6 hgcfNY']")));
+        caixaComprar.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='styles__CardTitle-sc-fbi3ap-2 lhvaqQ']")));
         navegador.findElement(By.linkText("Ir para o carrinho")).click();
 
         return new carrinhoDeCompra(navegador);
